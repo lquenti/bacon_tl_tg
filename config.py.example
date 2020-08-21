@@ -1,0 +1,15 @@
+"""
+Example Configuration. The following keys exist:
+  - TOKEN: Telegrams API Token, given by Botfather
+  - SEND_AS: Which way the pictures should be send.
+    Possible Values:
+      - LINK: As a link to the .jpeg
+      - PIC: As an uploaded pictures. Generates lot of traffic
+      - STICKER: As a Telegram Sticker
+"""
+from enum import Enum
+
+PicMode = Enum("PicMode", "LINK PIC STICKER")
+
+TOKEN: str = r""
+SEND_AS: PicMode = PicMode.STICKER
